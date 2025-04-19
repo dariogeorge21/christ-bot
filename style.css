@@ -1,0 +1,85 @@
+/* Custom styles for the spiritual chatbot */
+
+/* Base animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Divine animation delays for typing dots */
+.delay-75 {
+    animation-delay: 0.1s;
+}
+.delay-150 {
+    animation-delay: 0.2s;
+}
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+/* Subtle glow effect for divine elements */
+.shadow-divine {
+    box-shadow: 0 0 15px rgba(249, 211, 66, 0.3);
+}
+
+/* Chat container styling */
+#chat-container {
+    position: relative;
+    min-height: 400px;
+    max-height: 60vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make sure messages are visible */
+#chat-container > div:not(#welcome-container) {
+    z-index: 5;
+    position: relative;
+}
+
+/* Welcome container styling */
+#welcome-container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+/* Typing indicator styling */
+#typing-indicator.flex {
+    display: flex;
+}
+
+/* Message styling */
+.message {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+/* Animation for floating elements */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Animation for pulsing elements */
+@keyframes pulse-slow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
