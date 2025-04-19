@@ -14,7 +14,6 @@ const typingIndicator = document.getElementById('typing-indicator');
 const chatForm = document.getElementById('chat-form');
 const messageInput = document.getElementById('message-input');
 const sendButton = document.getElementById('send-button');
-const testButton = document.getElementById('test-button');
 
 // Load the response data from the JSON file
 async function loadResponseData() {
@@ -70,7 +69,19 @@ function initChat() {
     // Add event listeners
     chatForm.addEventListener('submit', handleSubmit);
     messageInput.addEventListener('input', handleInput);
-    testButton.addEventListener('click', testConnection);
+
+    // Handle Enter key press in the textarea
+    messageInput.addEventListener('keydown', function(event) {
+        // Check if Enter was pressed without Shift key (Shift+Enter allows for new lines)
+        if (event.key === 'Enter' && !event.shiftKey) {
+            event.preventDefault(); // Prevent default behavior (new line)
+
+            // If the send button is not disabled, trigger a click
+            if (!sendButton.disabled) {
+                sendButton.click();
+            }
+        }
+    });
 
     // Auto-resize textarea as user types
     messageInput.addEventListener('input', function() {
@@ -108,28 +119,6 @@ function handleInput() {
     sendButton.disabled = !message;
 }
 
-// Test connection button
-function testConnection() {
-    if (!chatStarted) {
-        // Hide welcome message and show initial message
-        welcomeContainer.style.opacity = '0';
-        setTimeout(() => {
-            welcomeContainer.style.display = 'none';
-            initialMessage.classList.remove('hidden');
-            chatStarted = true;
-        }, 500);
-    } else {
-        // Show typing indicator
-        showTypingIndicator();
-
-        // Hide typing indicator after a delay
-        setTimeout(() => {
-            hideTypingIndicator();
-            addBotMessage("Connection is working. I am here with you.");
-        }, 1500);
-    }
-}
-
 // Add user message to chat
 function addUserMessage(message) {
     if (!chatStarted) {
@@ -137,6 +126,8 @@ function addUserMessage(message) {
         welcomeContainer.style.opacity = '0';
         setTimeout(() => {
             welcomeContainer.style.display = 'none';
+            // Show initial message for first-time users
+            initialMessage.classList.remove('hidden');
             chatStarted = true;
         }, 500);
     }
