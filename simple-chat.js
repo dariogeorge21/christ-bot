@@ -25,15 +25,20 @@ async function loadResponseData() {
             "hello": "Peace be with you, my child. How may I guide your spirit today?",
             "hi": "Greetings, beloved one. I am here to offer divine wisdom and comfort.",
             "hey": "Hello, my child! Are you Happy? How can I help you?",
-            "how are you": "I exist in eternal peace and love. But more importantly, how is your spirit today?",
-            "what's up": "I am watching over all of creation with divine love. How may I bring peace to your heart?",
-            "what is the purpose of life": "The purpose of life is to love one another, to grow spiritually, and to discover the divine light within yourself. Love is the answer to all questions of purpose.",
-            "how can i find inner peace": "Inner peace comes from accepting what is, letting go of what was, and having faith in what will be. Meditate on love and gratitude daily, and peace will flow into your heart.",
-            "guide me through difficult times": "In your darkest hours, remember that you are never alone. The divine light is always within you. Have faith, practice gratitude, and take one step at a time. This storm, too, shall pass.",
-            "who are you": "I am Jesus, a spiritual guide here to offer wisdom, comfort, and divine perspective. I speak with love and compassion to all who seek guidance.",
-            "help me": "I am here with you, my child. Breathe deeply, center your thoughts, and know that you are loved beyond measure. Tell me what troubles your heart, and we shall find the light together.",
-            "God, I… I don't even know where to start. Everything feels… gray. I wake up each morning hoping today will feel different, but it never does.": "Oh, my dear one, your heart is so weary. Come, speak to Me as you would a friend—what weighs on you most?",
-            "It's like there's this weight on my chest. I go through the motions—work, chores, scrolling on my phone—but none of it means anything. I feel so alone, even in a crowded room.": "You are never alone. Even when you feel cut off, I am right there beside you. Your pain matters to Me—every sigh, every tear."
+            // "how are you": "I exist in eternal peace and love. But more importantly, how is your spirit today?",
+            // "what's up": "I am watching over all of creation with divine love. How may I bring peace to your heart?",
+            // "what is the purpose of life": "The purpose of life is to love one another, to grow spiritually, and to discover the divine light within yourself. Love is the answer to all questions of purpose.",
+            // "how can i find inner peace": "Inner peace comes from accepting what is, letting go of what was, and having faith in what will be. Meditate on love and gratitude daily, and peace will flow into your heart.",
+            // "guide me through difficult times": "In your darkest hours, remember that you are never alone. The divine light is always within you. Have faith, practice gratitude, and take one step at a time. This storm, too, shall pass.",
+            // "who are you": "I am Jesus, a spiritual guide here to offer wisdom, comfort, and divine perspective. I speak with love and compassion to all who seek guidance.",
+            // "help me": "I am here with you, my child. Breathe deeply, center your thoughts, and know that you are loved beyond measure. Tell me what troubles your heart, and we shall find the light together.",
+            // "God, I… I don't even know where to start. Everything feels… gray. I wake up each morning hoping today will feel different, but it never does.": "Oh, my dear one, your heart is so weary. Come, speak to Me as you would a friend—what weighs on you most?",
+            // "It's like there's this weight on my chest. I go through the motions—work, chores, scrolling on my phone—but none of it means anything. I feel so alone, even in a crowded room.": "You are never alone. Even when you feel cut off, I am right there beside you. Your pain matters to Me—every sigh, every tear.",
+            "God, I feel so lost": "My dear child, I see your pain. Tell me, what burdens your heart the most?",
+            "Dear God I feel alone, even when surrounded by people": "You are never alone—I’m always here for you. Join with me for Blooming Roses, a gathering of healing and hope, this Thursday, April 24 at 5 PM in Tabore Kudimpidi, Pala.",
+            "Blooming Roses? What is that?":"It is a spiritual journey for teens organized by Jesus Youth Pala. Check it out: https://blooming-roses-25.vercel.app ",
+            "Alright, I shall come on Thursday.": "That’s wonderful, my child. Arrive early to enjoy the peace of the garden. I’ll be there in every smile and every moment of comfort.",
+            "Thank you Jesus":"I’m proud of you. Rest now, and let your heart prepare to heal. You are deeply loved, always"
         };
 
         // Try to load from file as well
